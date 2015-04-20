@@ -24,3 +24,6 @@ Checkout example/app.js code which is using express. But here are some steps:
 4) User will approve or cancel payment on paypal redirecting back to redirectUrl or CancelUrl
 5) If redirectUrl was used make GET handler (in the example its /paypal/success) and call getExpressCheckoutDetails (set second param to be true as you most likely wish to charge immediately)
 6) Success of getExpressCheckoutDetails will return object you can store as charge details.  
+
+License: 
+MIT
