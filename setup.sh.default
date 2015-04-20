@@ -1,0 +1,4 @@
+export API_USERNAME='<enter here>'
+export API_PASSWORD='<enter here>'
+export SIGNATURE='<enter here>'
+export LOGO_IMAGE='<enter full url here>'
