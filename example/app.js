@@ -48,7 +48,7 @@ app.post('/pay', function(req, res) {
 		returnUrl, 
 		cancelUrl, 
 		false,
-		function(err, redirectUrl) {
+		function(err, data) {
 		if (err) {
 			console.log(err);
 			res.status(500).send(err);
@@ -56,7 +56,7 @@ app.post('/pay', function(req, res) {
 		}
 
 		// Regular paid.
-		res.redirect(redirectUrl);
+		res.redirect(data.redirectUrl);
 	});
 });
 
