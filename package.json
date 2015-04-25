@@ -1,6 +1,6 @@
 {
   "name": "paypal-express-checkout-simple",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple implementation of paypal express checkout so you can quickly start using Paypal. Supports only basics to sell items.",
   "main": "./index.js",
   "scripts": {
