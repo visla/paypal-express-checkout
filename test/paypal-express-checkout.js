@@ -58,9 +58,9 @@ describe('Test paypal-express-checkout', function() {
 		};
 
 		var paypal = Paypal.create('username', 'pswd', 'signature');
-		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, redirectUrl) {
-			console.log('Redirect to paypal: ' + redirectUrl);
-			assert.ok(redirectUrl.indexOf('new_token') !== -1);
+		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, data) {
+			console.log('Redirect to paypal: ' + data.redirectUrl);
+			assert.ok(data.redirectUrl.indexOf('new_token') !== -1);
 			done();
 		});
 	});	
@@ -86,9 +86,9 @@ describe('Test paypal-express-checkout', function() {
 		var paypal = Paypal.create('username', 'pswd', 'signature');
 		paypal.setPayOptions('MyBrand', 'http://hdrimage.jpg', 'http://logoimg.jpg', 'ff00ff', 'ffffff');
 
-		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, redirectUrl) {
-			console.log('Redirect to paypal: ' + redirectUrl);
-			assert.ok(redirectUrl.indexOf('new_token') !== -1);
+		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, data) {
+			console.log('Redirect to paypal: ' + data.redirectUrl);
+			assert.ok(data.redirectUrl.indexOf('new_token') !== -1);
 			done();
 		});
 	});
@@ -136,9 +136,9 @@ describe('Test paypal-express-checkout', function() {
 			},
 			]);
 
-		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, redirectUrl) {
-			console.log('Redirect to paypal: ' + redirectUrl);
-			assert.ok(redirectUrl.indexOf('new_token') !== -1);
+		paypal.setExpressCheckoutPayment('test@email.com', '001', 1000.99, 'Some description', 'USD', 'returnUrl', 'cancelUrl', false, function(err, data) {
+			console.log('Redirect to paypal: ' + data.redirectUrl);
+			assert.ok(data.redirectUrl.indexOf('new_token') !== -1);
 			done();
 		});
 	});
